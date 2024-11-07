@@ -35,13 +35,17 @@
 
     <header class="header">
 
+        
+
         <div id="menu-btn" class="fas fa-bars"></div>
 
+        <a href="#" class="logo-container">
+            <img src="Image/logomamas.png" alt="Hungry MAMA Logo">
+            </a>
 
 
-        <a href="#" 
-        class="logo-container"><h1>HUNGRY MAMA</h1>
-        <img src="Image/logomamas.png" alt="Hungry MAMA Logo">
+        <a href="#" class="logo-container"><h1>HUNGRY MAMA</h1>
+       
         </a>
 
 
@@ -50,9 +54,8 @@
 
             <a href="#home">home</a>
 
-            <a href="#about">about Us</a>
 
-            <a href="#menu">Best Seller</a>
+            <a href="#menu">Menu</a>
 
             <a href="#review">review</a>
 
@@ -60,15 +63,35 @@
 
         </nav>
 
-
-
-        <a href="order.html" class="btn">MENU</a>
+        <div class="user-actions">
+            <button id="admin-login-btn" class="btn">Admin Login</button>
+            <div class="cart-container">
+                <a href="#cart-popup" class="btn" id="cart-btn">
+                    Cart
+                    <img src="Image/cart.png" alt="Cart" class="cart-icon">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
 
     </header>
 
+<!-- Admin Login Popup -->
+<div id="admin-login-popup" class="popup">
+    <div class="popup-content">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+            <input type="text" id="admin-username" placeholder="Admin Username" required>
+            <input type="password" id="admin-password" placeholder="Admin Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button id="close-admin-login">Close</button>
+    </div>
+</div>
 
 
-    <!-- HOME -->
+
+    <!-- HOME  -->
 
     <section class="home" id="home">
 
@@ -78,8 +101,7 @@
 
                 <h3>"Dessert is the sweetest way to end a meal and start the day."</h3>
 
-                <a href="#menu" class="btn">Click here</a>
-
+                
             </div>
 
 
@@ -106,237 +128,669 @@
 
     </section>
 
+  <!-- MENU -->
 
+  <section class="menu" id="menu">
 
-    <!-- ABOUT -->
+    <h1 class="heading">our menu <span>Saucer Sandwich, Shake & Fruit Soda</span></h1>
+    <div class="box-container">
 
-    <section class="about" id="about">
+        <a  class="box">
 
-        <h1 class="heading">about us <span>why choose us</span></h1>
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
 
-
-
-        <div class="row">
-
-            <div class="image">
-
-                <img src="Image/mamachef.jfif" alt="">
-
-            </div>
-
-
+            
 
             <div class="content">
 
-                <h3 class="title">what's make our Foods & Drinks special!</h3>
+                <h3>Saucer Sandwich - Cheese</h3>
+                <p>Choose</p>
+                <span>
+                    <label>
+                      <input type="radio" name="size" value="Sandwich - Cheese" data-price="20">
+                      ₱20.00 
+                     </label>
+                
+                </span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
 
-                <p>At Hunry Mama, we believe in delivering flavors that not only satisfy but also excite. Our mission is to serve food and drinks that bring joy with every bite and sip. Specializing in saucer sandwiches, shake drinks, and fruit soda drinks, we take pride in our unique offerings that stand out for their taste, quality, and creativity.  we strive to create a delightful experience for all our customers, whether you're grabbing a quick bite or enjoying a refreshing drink. Come taste the difference!</p>
+        </a>
 
-                <a href="#" class="btn">Thank you</a>
+        <a class="box">
 
-                <div class="icons-container">
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
 
-                    <div class="icons">
+            <div class="content">
 
-                        <img src="Image/emote.png" alt="">
-
-                        <h3>quality dessert</h3>
-
-                    </div>
-
-                    <div class="icons">
-
-                        <img src="Image/icons.png" alt="" >
-
-                        
-
-                    </div>
-
-                    <div class="icons">
-
-                        <img src="Image/paperbag.png" alt="">
-
-                        <h3>Enjoy your dessert</h3>
-
-                    </div>
-
-                </div>
+                <h3>Saucer Sandwich - Egg</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Egg regular" data-price="16">
+                      ₱16.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Egg w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
 
             </div>
 
-        </div>
+        </a>
 
+        <a class="box">
+
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
+
+            <div class="content">
+
+                <h3>Saucer Sandwich - Corned Beef</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Corned Beef regular" data-price="20">
+                      ₱20.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Corned Beef w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
+
+            <div class="content">
+
+                <h3>Saucer Sandwich - Tuna</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Tuna regular" data-price="20">
+                      ₱20.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Tuna w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
+
+            <div class="content">
+
+                <h3>Saucer Sandwich - Ham</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Ham regular" data-price="20">
+                      ₱20.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Ham w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
+
+            <div class="content">
+
+                <h3>Saucer Sandwich - HotDog</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - HotDog regular" data-price="20">
+                      ₱20.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - HotDog w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+                
+            </div>
+
+        </a>
+
+        <a  class="box">
+
+            <img src="Image/saucerpic-removebg-preview.png" alt="">
+
+            <div class="content">
+
+                <h3>Saucer Sandwich - Burger</h3>
+                <p>Choose</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Burger regular" data-price="20">
+                      ₱20.00 -
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Sandwich - Burger w/cheese" data-price="25">
+                      ₱25.00 w/cheese
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </a>
+
+
+
+        <a  class="box">
+
+            <img src="Image/avocadoshake.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Avocado</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Avocado 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Avocado 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+
+
+        <a  class="box">
+
+            <img src="Image/pandan-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Buko Pandan</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Buko Pandan 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Buko Pandan 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        
+        <a  class="box">
+
+            <img src="Image/chocokissesshake.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Choco Kisses</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Choco Kisses 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Choco Kisses 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+
+        <a class="box">
+
+            <img src="Image/oreoshake.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Cookies & Cream</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Cookies & Cream 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Cookies & Cream 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/ubeshake.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Ube</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Ube 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Ube 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/mangoshake.png" alt="">
+
+            <div class="content">
+
+                <h3>Shake Drink - Mango</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Mango 12oz" data-price="20">
+                      ₱20.00 - 12oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Shake - Mango 16oz" data-price="28">
+                      ₱28.00 - 16oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/greenapple-removebg.png " alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - GreenApple</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - GreenApple 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - GreenApple 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </a>
+
+
+
+        <a class="box">
+
+            <img src="Image/lemon-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Lemon</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Lemon 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label>
+                      <input type="radio" name="size" value="Soda - Lemon 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                      <label class="radio-option">
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/blueberry-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Blueberry</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Blueberry 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Blueberry 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/strawberry-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Strawberry</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Strawberry 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Strawberry 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+
+        <a class="box">
+
+            <img src="Image/bubblegum.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Bubble Gum</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Bubble Gum 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Bubble Gum 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+
+            </div>
+
+        </a>
+
+        <a  class="box">
+
+            <img src="Image/watermelon-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Water Melon</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Water Melon 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Water Melon 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/kiwi.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Kiwi</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Kiwi 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Kiwi 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/respberry-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Respberry</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Respberry 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Respberry 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/grape-removebg.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Grape</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Grape 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Grape 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a class="box">
+
+            <img src="Image/rootbeer.png" alt="">
+
+            <div class="content">
+
+                <h3>Fruit Soda - Rootbeer</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Rootbeer 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Rootbeer 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>
+
+            </div>
+
+        </a>
+
+        <a  class="box">
+
+            <img src="Image/melon.png" alt="">
+        
+            <div class="content">
+        
+                <h3>Fruit Soda - Melon</h3>
+                <p>Choose Size</p>
+                <div class="radio-group">
+                <span>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Melon 16oz" data-price="39">
+                      ₱39.00 - 16oz
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="size" value="Soda - Melon 22oz" data-price="49">
+                      ₱49.00 - 22oz
+                    </label>
+                </span>
+            </div>
+                <button class="btn add-to-cart">Add to Cart</button>    
+        
+            </div>
+        
+        </a>
+        
+
+    </div>
     </section>
 
 
-
-    <!-- MENU -->
-
-    <section class="menu" id="menu">
-
-        <h1 class="heading">Best seller <span>Saucer Sandwich, Shake & Fruit Soda</span></h1>
-
-
-
-        <div class="box-container">
-
-            
-            <a href="#" class="box">
-
-                <img src="Image/saucerpic-removebg-preview.png" alt="">
-
-                <div class="content">
-
-                    <h3>Saucer Sandwich - Egg</h3>
-
-                    <p>Choose </p>
-
-                    <span>₱16.00 / ₱20.00 w/cheese</span>
-
-                </div>
-
-            </a>
-
-           
-
-            <a href="#" class="box">
-
-                <img src="Image/saucerpic-removebg-preview.png" alt="">
-
-                <div class="content">
-
-                    <h3>Saucer Sandwich - HotDog</h3>
-
-                    <p>Choose</p>
-
-                    <span>₱20.00 / ₱25.00 w/cheese</span>
-                </div>
-
-            </a>
-               
-            <a href="#" class="box">
-
-                <img src="Image/saucerpic-removebg-preview.png" alt="">
-
-                <div class="content">
-
-                    <h3>Saucer Sandwich - Ham</h3>
-
-                    <p>Choose</p>
-
-                    <span>₱20.00 / ₱25.00 w/cheese</span>
-                    
-                </div>
-
-            </a>
-            
-            <a href="#" class="box">
-
-                <img src="Image/chocokissesshake.png" alt="">
-
-                <div class="content">
-
-                    <h3>Shake Drink - Choco Kisses</h3>
-
-                    <p>Choose Size</p>
-
-                    <span>₱20.00 - 12oz / ₱28.00 - 16oz</span>
-
-                </div>
-
-            </a>
-
-            <a href="#" class="box">
-
-                <img src="Image/mangoshake.png" alt="">
-
-                <div class="content">
-
-                    <h3>Shake Drink - Mango</h3>
-
-                    <p>Choose Size</p>
-
-                    <span>₱20.00 - 12oz / ₱28.00 - 16oz</span>
-
-                </div>
-
-            </a>
-
-
-            <a href="#" class="box">
-
-                <img src="Image/oreoshake.png" alt="">
-
-                <div class="content">
-
-                    <h3>Shake Drink - Cookies & Cream</h3>
-
-                    <p>Choose Size</p>
-
-                    <span>₱20.00 - 12oz / ₱28.00 - 16oz</span>
-
-                </div>
-
-
-                <a href="#" class="box">
-
-                    <img src="Image/strawberry-removebg.png" alt="">
+    <div id="cartPopup" class="cart-popup">
+         <!-- ... other header content ... -->
     
-                    <div class="content">
-    
-                        <h3>Fruit Soda - Strawberry</h3>
-    
-                        <p>Choose Size</p>
-    
-                        <span>₱39.00 - 16oz / ₱49.00 - 22oz</span>
-
-    
-                    </div>
-    
-                </a>
-
-
-
-            <a href="#" class="box">
-
-                <img src="Image/lemon-removebg.png" alt="">
-
-                <div class="content">
-
-                    <h3>Fruit Soda - Lemon</h3>
-
-                    <p>Choose Size</p>
-
-                    <span>₱39.00 - 16oz / ₱49.00 - 22oz</span>
-
-                </div>
-
-            </a>
-
-            
-
-            <a href="#" class="box">
-
-                <img src="Image/watermelon-removebg.png" alt="">
-
-                <div class="content">
-
-                    <h3>Fruit Soda - Water Melon</h3>
-
-                    <p>Choose Size</p>
-
-                    <span>₱39.00 - 16oz / ₱49.00 - 22oz</span>
-
-                </div>
-
-            </a>
-
-            
-
+        <div class="cart-content">
+            <div id="customerInfo">
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+            </div>
+            <h2>Your Cart (<span id="cart-count-popup">0</span> items)</h2>
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: ₱<span id="cartTotal">0.00</span></p>
+          
+            <button id="closeCart">Close</button>
+            <button id="checkoutBtn">Checkout</button>
         </div>
+    </div>
 
-    </section>
-
+    <!-- Add this new div for the order confirmation -->
+    <div id="orderConfirmation" class="order-confirmation" style="display: none;">
+        <h2>Order Confirmation</h2>
+        <p>Thank you for your order, <span id="confirmationName"></span>!</p>
+        <p>Your order number is: <span id="orderNumber"></span></p>
+        <p>Please wait until your number is called to collect your order.</p>
+        <button id="closeConfirmation">Close</button>
+    </div>
 
 
     <!-- REVIEW -->
@@ -505,7 +959,7 @@
 
                 <h3>our branch</h3>
 
-                <a href="#">
+                <a>
                     <img src="Image/loc_icon.png" alt="" class="location-icon"> Poblacion Muntinlupa City
                     
                 </a>
@@ -538,11 +992,11 @@
 
                 <h3>contact info</h3>
 
-                <a href="#"><i class="fas fa-phone"></i> +63 906-361-5293</a>
+                <a ><i class="fas fa-phone"></i> +63 906-361-5293</a>
 
-                <a href="#"><i class="fas fa-phone"></i> +63 947-544-2007</a>
+                <a><i class="fas fa-phone"></i> +63 947-544-2007</a>
 
-                <a href="#"><i class="fas fa-envelope"></i> HungryMama@gmail.com</a>
+                <a><i class="fas fa-envelope"></i> HungryMama@gmail.com</a>
 
             </section>
 
@@ -554,9 +1008,9 @@
 
                 <h3>Social Links</h3>
 
-                <a href=" " target="_blank"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a ><i class="fab fa-facebook-f"></i> facebook</a>
 
-                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a ><i class="fab fa-instagram"></i> instagram</a>
 
                 
 
@@ -590,6 +1044,7 @@
     <footer class="footers">
         <p>© 2024, HUNGRY MAMA ·    
             <a href="terms.html" style="color: rgb(104, 100, 100); text-decoration: none; font-family: Times, sans-serif;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'">Terms of Service</a>
+            <a href="terms.html" style="color: rgb(104, 100, 100); text-decoration: none; font-family: Times, sans-serif;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'">About us</a>
         </p>
     </footer>
      

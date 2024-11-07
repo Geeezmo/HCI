@@ -12,6 +12,7 @@
     width: 80px; /* Adjust the width of the logo as needed */
     height: auto;
     margin-left: 10px; /* Adds space between the text and the image */
+    align-items: left;
 }
 
 .logo-container h1 {
@@ -151,6 +152,7 @@ section {
 
 
 
+
 .btn:hover {
 
     border-radius: var(--border-radius-hover);
@@ -159,6 +161,99 @@ section {
 
 }
 
+/* login */
+
+
+
+
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#admin-login-btn {
+    background-color: transparent;
+    color: var(--main-color);
+    padding: 0.9rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: all 0.2s linear;
+}
+
+#admin-login-btn:hover {
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.popup-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1.6rem;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background-color 0.2s;
+}
+
+.popup-content button:hover {
+    background-color: #333;
+}
+
+#close-admin-login {
+    margin-top: 1rem;
+    background-color: #f0f0f0;
+    color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .user-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 
 /* HEADER */
@@ -223,7 +318,7 @@ section {
 
 
 
-.header .btn {
+.header .btn1 {
 
     margin-top: 0;
 
@@ -387,153 +482,6 @@ section {
 
 
 
-/* ABOUT */
-
-
-
-.about .row {
-
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 1.5rem;
-
-}
-
-
-
-.about .row .image {
-
-    flex: 1 1 42rem;
-
-}
-
-
-
-.about .row .image img {
-
-    width: 100%;
-
-    animation: aboutImage 4s linear infinite;
-
-}
-
-
-
-@keyframes aboutImage {
-
-
-
-    0%,
-
-    100% {
-
-        transform: scale(.9);
-
-        border-radius: var(--border-radius-hover);
-
-    }
-
-
-
-    50% {
-
-        transform: scale(.8);
-
-        border-radius: var(--border-radius);
-
-    }
-
-}
-
-
-
-.about .row .content {
-
-    flex: 1 1 42rem;
-
-}
-
-
-
-.about .row .content .title {
-
-    color: var(--main-color);
-
-    font-size: 3rem;
-line-height: 1.8;
-
-}
-
-
-
-.about .row .content p {
-
-    color: var(--main-color);
-
-    font-size: 1.5rem;
-
-    line-height: 1.8;
-
-    padding: 1rem 0;
-    
-    font-size: 20px;
-
-}
-
-
-
-.about .row .content .icons-container {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 1rem;
-
-    padding-top: 3rem;
-
-}
-
-
-
-.about .row .content .icons-container .icons {
-
-    flex: 1 1 15rem;
-
-    padding: 1.5rem;
-
-    text-align: center;
-    
-    border: var(--border);
-    
-    border-radius: var(--border-radius);
-
-}
-
-
-
-.about .row .content .icons-container .icons img {
-
-    height: 5rem;
-    
-
-}
-
-
-
-.about .row .content .icons-container .icons h3 {
-
-    font-size: 1.7rem;
-
-    padding-top: 1rem;
-
-    color: var(--main-color);
-
-}
 
 
 
@@ -644,6 +592,174 @@ line-height: 1.8;
     line-height: 1.8;
 
 }
+.menu .box-container .box .content .btn.add-to-cart {
+    background-color: transparent;
+    color: var(--main-color);
+    padding: 8px 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu .box-container .box .content .btn.add-to-cart:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* cart */
+
+.menu .box-container .box .content .btn.add-to-cart {
+    background-color: transparent;
+    color: var(--main-color);
+    padding: 8px 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu .box-container .box .content .btn.add-to-cart:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.cart-popup, .order-confirmation {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1001;
+    padding: 20px;
+}
+.cart-popup h2, .order-confirmation h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.cart-popup h2, .order-confirmation h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems li {
+    font-size: 1.6rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#cartTotal {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#customerInfo {
+    margin-top: 20px;
+}
+
+#customerName {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+#closeCart, #checkoutBtn, #closeConfirmation {
+    background-color: transparent;
+    color: var(--main-color);
+    padding: 8px 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+#closeCart:hover, #checkoutBtn:hover, #closeConfirmation:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.order-confirmation p {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+#orderNumber {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.btn {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  /* Style for the cart icon */
+  .cart-icon {
+    width: 40px; 
+    height: 40px; 
+    margin-left: 11px; 
+  }
+
 
 
 
@@ -1110,4 +1226,75 @@ line-height: 1.8;
     width: 55px;  /* Set the desired width */
     height: auto; /* Keeps the aspect ratio */
     margin-left: 0px; /* Adds space between the text and icon */
+}
+
+/* radio button */ 
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.radio-label {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+/* Optional: Style the radio buttons to match your design */
+.radio-option input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-option input[type="radio"]:checked {
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
 }
